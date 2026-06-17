@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Rahman M | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* Light Theme (Retro Amber Accents) */
-            --bg-primary: #f8fafc;        /* Slate 50 */
-            --bg-secondary: #f1f5f9;      /* Slate 100 */
-            --bg-card: #ffffff;           /* White */
+            --bg-primary: #f8fafc;
+            /* Slate 50 */
+            --bg-secondary: #f1f5f9;
+            /* Slate 100 */
+            --bg-card: #ffffff;
+            /* White */
 
-            --accent: #f59e0b;            /* Amber 500 */
-            --accent-hover: #fbbf24;      /* Amber 400 */
+            --accent: #f59e0b;
+            /* Amber 500 */
+            --accent-hover: #fbbf24;
+            /* Amber 400 */
             --accent-glow: rgba(245, 158, 11, 0.22);
-            --on-accent: #0b1220;         /* readable on amber */
+            --on-accent: #0b1220;
+            /* readable on amber */
 
-            --cyan: #0891b2;              /* Cyan 600 */
-            --pink: #e11d48;              /* Rose 600 */
-            --green: #16a34a;             /* Green 600 */
-            --yellow: #f59e0b;            /* keep warm highlight */
+            --cyan: #0891b2;
+            /* Cyan 600 */
+            --pink: #e11d48;
+            /* Rose 600 */
+            --green: #16a34a;
+            /* Green 600 */
+            --yellow: #f59e0b;
+            /* keep warm highlight */
 
-            --text-primary: #0f172a;      /* Slate 900 */
-            --text-secondary: #334155;    /* Slate 700 */
-            --text-muted: #64748b;        /* Slate 500 */
+            --text-primary: #0f172a;
+            /* Slate 900 */
+            --text-secondary: #334155;
+            /* Slate 700 */
+            --text-muted: #64748b;
+            /* Slate 500 */
 
-            --pixel-border: #cbd5e1;      /* Slate 300 */
-            --pixel-border-light: #94a3b8; /* Slate 400 */
+            --pixel-border: #cbd5e1;
+            /* Slate 300 */
+            --pixel-border-light: #94a3b8;
+            /* Slate 400 */
 
             --shadow: 6px 6px 0px rgba(15, 23, 42, 0.12);
             --shadow-lg: 10px 10px 0px rgba(15, 23, 42, 0.12);
@@ -35,7 +53,11 @@
             --ring: 0 0 0 4px rgba(245, 158, 11, 0.28);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Space Grotesk', sans-serif;
@@ -57,9 +79,19 @@
             z-index: 0;
         }
 
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
-        ::-webkit-scrollbar-thumb { background: var(--accent); border: 2px solid var(--bg-primary); border-radius: 999px; }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border: 2px solid var(--bg-primary);
+            border-radius: 999px;
+        }
 
         /* Navigation */
         .navbar {
@@ -80,8 +112,14 @@
             transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, padding 0.25s ease, top 0.25s ease;
         }
 
-        .navbar.scrolled { top: 10px; padding: 0.5rem 1.8rem; }
-        .navbar.nav-hidden { transform: translate(-50%, -100px); }
+        .navbar.scrolled {
+            top: 10px;
+            padding: 0.5rem 1.8rem;
+        }
+
+        .navbar.nav-hidden {
+            transform: translate(-50%, -100px);
+        }
 
         .nav-logo {
             font-family: 'Pixelify Sans', cursive;
@@ -100,7 +138,11 @@
             clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
         }
 
-        .nav-links { display: flex; gap: 0.4rem; list-style: none; }
+        .nav-links {
+            display: flex;
+            gap: 0.4rem;
+            list-style: none;
+        }
 
         .nav-links a {
             text-decoration: none;
@@ -112,7 +154,12 @@
             transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active { background: var(--accent); color: var(--on-accent); transform: translateY(-1px); }
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--accent);
+            color: var(--on-accent);
+            transform: translateY(-1px);
+        }
 
         .nav-toggle {
             display: none;
@@ -123,6 +170,7 @@
             position: relative;
             z-index: 1002;
         }
+
         .nav-toggle span {
             width: 24px;
             height: 3px;
@@ -130,12 +178,15 @@
             transition: transform 0.25s ease, opacity 0.25s ease;
             border-radius: 2px;
         }
+
         .nav-toggle.active span:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
+
         .nav-toggle.active span:nth-child(2) {
             opacity: 0;
         }
+
         .nav-toggle.active span:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
         }
@@ -172,7 +223,9 @@
             z-index: 1;
         }
 
-        .hero-text { animation: fadeInUp 0.8s ease-out; }
+        .hero-text {
+            animation: fadeInUp 0.8s ease-out;
+        }
 
         .hero-badge {
             display: inline-flex;
@@ -197,7 +250,17 @@
             animation: pulse 2s infinite;
         }
 
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
 
         .hero-title {
             font-family: 'Pixelify Sans', cursive;
@@ -218,9 +281,18 @@
             letter-spacing: 0.15em;
         }
 
-        .hero-desc { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; }
+        .hero-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
 
-        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
         .btn {
             display: inline-flex;
@@ -242,14 +314,38 @@
             box-shadow: var(--shadow-accent);
         }
 
-        .btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0px rgba(180, 83, 9, 0.25); }
-        .btn-primary:focus-visible { outline: none; box-shadow: var(--shadow-accent), var(--ring); }
+        .btn-primary:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px rgba(180, 83, 9, 0.25);
+        }
 
-        .btn-secondary { background: var(--bg-card); color: var(--text-primary); box-shadow: var(--shadow); }
-        .btn-secondary:hover { background: var(--bg-secondary); transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); }
-        .btn-secondary:focus-visible { outline: none; box-shadow: var(--shadow), var(--ring); }
+        .btn-primary:focus-visible {
+            outline: none;
+            box-shadow: var(--shadow-accent), var(--ring);
+        }
 
-        .hero-links { display: flex; gap: 1rem; margin-top: 2rem; }
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary:focus-visible {
+            outline: none;
+            box-shadow: var(--shadow), var(--ring);
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
 
         .hero-link {
             width: 44px;
@@ -264,14 +360,33 @@
             color: var(--text-secondary);
         }
 
-        .hero-link:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--pixel-border); color: var(--accent-hover); border-color: var(--accent); }
-        .hero-link svg { width: 20px; height: 20px; }
+        .hero-link:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--pixel-border);
+            color: var(--accent-hover);
+            border-color: var(--accent);
+        }
+
+        .hero-link svg {
+            width: 20px;
+            height: 20px;
+        }
 
         /* Pixel Computer - Amber Theme */
-        .hero-image { position: relative; display: flex; justify-content: center; align-items: center; animation: fadeInRight 0.8s ease-out 0.2s both; }
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 0.8s ease-out 0.2s both;
+        }
 
-        .pixel-computer { position: relative; width: 320px; height: 300px; }
-        
+        .pixel-computer {
+            position: relative;
+            width: 320px;
+            height: 300px;
+        }
+
         .profile-polaroid {
             width: 300px;
             background: var(--bg-card);
@@ -283,7 +398,7 @@
             transform: rotate(3deg);
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
-        
+
         .profile-polaroid:hover {
             transform: rotate(0deg) translate(-4px, -4px);
             box-shadow: 16px 16px 0 rgba(15, 23, 42, 0.12), 0 0 25px var(--accent-glow);
@@ -301,7 +416,7 @@
             border: 1px solid rgba(15, 23, 42, 0.1);
             backdrop-filter: blur(4px);
             z-index: 3;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .profile-img {
@@ -341,18 +456,75 @@
             border-radius: 6px;
         }
 
-        .pc-screen-content { position: absolute; top: 14px; left: 14px; right: 14px; bottom: 14px; overflow: hidden; }
+        .pc-screen-content {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            right: 14px;
+            bottom: 14px;
+            overflow: hidden;
+        }
 
-        .code-line { height: 6px; margin-bottom: 5px; border-radius: 3px; animation: typeLine 3s ease-in-out infinite; }
-        .code-line:nth-child(1) { width: 70%; background: var(--accent); animation-delay: 0s; }
-        .code-line:nth-child(2) { width: 50%; background: var(--cyan); animation-delay: 0.2s; }
-        .code-line:nth-child(3) { width: 85%; background: var(--pink); animation-delay: 0.4s; }
-        .code-line:nth-child(4) { width: 40%; background: var(--green); animation-delay: 0.6s; }
-        .code-line:nth-child(5) { width: 65%; background: var(--accent-hover); animation-delay: 0.8s; }
-        .code-line:nth-child(6) { width: 55%; background: var(--yellow); animation-delay: 1s; }
-        .code-line:nth-child(7) { width: 75%; background: var(--cyan); animation-delay: 1.2s; }
+        .code-line {
+            height: 6px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            animation: typeLine 3s ease-in-out infinite;
+        }
 
-        @keyframes typeLine { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+        .code-line:nth-child(1) {
+            width: 70%;
+            background: var(--accent);
+            animation-delay: 0s;
+        }
+
+        .code-line:nth-child(2) {
+            width: 50%;
+            background: var(--cyan);
+            animation-delay: 0.2s;
+        }
+
+        .code-line:nth-child(3) {
+            width: 85%;
+            background: var(--pink);
+            animation-delay: 0.4s;
+        }
+
+        .code-line:nth-child(4) {
+            width: 40%;
+            background: var(--green);
+            animation-delay: 0.6s;
+        }
+
+        .code-line:nth-child(5) {
+            width: 65%;
+            background: var(--accent-hover);
+            animation-delay: 0.8s;
+        }
+
+        .code-line:nth-child(6) {
+            width: 55%;
+            background: var(--yellow);
+            animation-delay: 1s;
+        }
+
+        .code-line:nth-child(7) {
+            width: 75%;
+            background: var(--cyan);
+            animation-delay: 1.2s;
+        }
+
+        @keyframes typeLine {
+
+            0%,
+            100% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
 
         .pc-stand {
             position: absolute;
@@ -396,11 +568,32 @@
             padding: 8px;
         }
 
-        .pc-key { background: #e2e8f0; border-radius: 2px; border: 1px solid var(--pixel-border-light); animation: keyGlow 4s ease-in-out infinite; }
-        .pc-key:nth-child(odd) { animation-delay: 0.5s; }
-        .pc-key:nth-child(3n) { animation-delay: 1s; }
+        .pc-key {
+            background: #e2e8f0;
+            border-radius: 2px;
+            border: 1px solid var(--pixel-border-light);
+            animation: keyGlow 4s ease-in-out infinite;
+        }
 
-        @keyframes keyGlow { 0%, 100% { background: #e2e8f0; } 50% { background: rgba(245, 158, 11, 0.18); } }
+        .pc-key:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        .pc-key:nth-child(3n) {
+            animation-delay: 1s;
+        }
+
+        @keyframes keyGlow {
+
+            0%,
+            100% {
+                background: #e2e8f0;
+            }
+
+            50% {
+                background: rgba(245, 158, 11, 0.18);
+            }
+        }
 
         .pc-mouse {
             position: absolute;
@@ -437,16 +630,64 @@
         }
 
         /* Floating Elements */
-        .floating-elements { position: absolute; inset: -50px; pointer-events: none; }
-        .float-item { position: absolute; animation: float 6s ease-in-out infinite; }
-        .float-item:nth-child(1) { top: -10%; left: -5%; animation-delay: 0s; }
-        .float-item:nth-child(2) { top: -5%; right: -5%; animation-delay: 1s; }
-        .float-item:nth-child(3) { bottom: 5%; left: -10%; animation-delay: 2s; }
-        .float-item:nth-child(4) { bottom: -5%; right: -5%; animation-delay: 3s; }
-        .float-item:nth-child(5) { top: 30%; right: -15%; animation-delay: 1.5s; }
-        .float-item:nth-child(6) { bottom: 20%; left: -15%; animation-delay: 2.5s; }
+        .floating-elements {
+            position: absolute;
+            inset: -50px;
+            pointer-events: none;
+        }
 
-        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(5deg); } }
+        .float-item {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-item:nth-child(1) {
+            top: -10%;
+            left: -5%;
+            animation-delay: 0s;
+        }
+
+        .float-item:nth-child(2) {
+            top: -5%;
+            right: -5%;
+            animation-delay: 1s;
+        }
+
+        .float-item:nth-child(3) {
+            bottom: 5%;
+            left: -10%;
+            animation-delay: 2s;
+        }
+
+        .float-item:nth-child(4) {
+            bottom: -5%;
+            right: -5%;
+            animation-delay: 3s;
+        }
+
+        .float-item:nth-child(5) {
+            top: 30%;
+            right: -15%;
+            animation-delay: 1.5s;
+        }
+
+        .float-item:nth-child(6) {
+            bottom: 20%;
+            left: -15%;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
 
         .pixel-smiley {
             width: 40px;
@@ -458,7 +699,8 @@
             border-radius: 50%;
         }
 
-        .pixel-smiley::before, .pixel-smiley::after {
+        .pixel-smiley::before,
+        .pixel-smiley::after {
             content: '';
             position: absolute;
             width: 6px;
@@ -468,8 +710,13 @@
             border-radius: 50%;
         }
 
-        .pixel-smiley::before { left: 10px; }
-        .pixel-smiley::after { right: 10px; }
+        .pixel-smiley::before {
+            left: 10px;
+        }
+
+        .pixel-smiley::after {
+            right: 10px;
+        }
 
         .pixel-envelope {
             width: 45px;
@@ -484,7 +731,10 @@
         .pixel-envelope::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
             border-left: 22px solid transparent;
             border-right: 22px solid transparent;
             border-top: 17px solid rgba(34, 211, 238, 0.7);
@@ -515,7 +765,7 @@
             left: 10px;
             width: 3px;
             height: 12px;
-            background: rgba(255,255,255,0.6);
+            background: rgba(255, 255, 255, 0.6);
             animation: steam 2s ease-in-out infinite;
             border-radius: 2px;
         }
@@ -527,19 +777,47 @@
             left: 20px;
             width: 3px;
             height: 10px;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255, 255, 255, 0.4);
             animation: steam 2s ease-in-out infinite 0.5s;
             border-radius: 2px;
         }
 
-        @keyframes steam { 0%, 100% { opacity: 0.6; transform: translateY(0); } 50% { opacity: 0; transform: translateY(-5px); } }
+        @keyframes steam {
 
-        .pixel-star { width: 30px; height: 30px; color: var(--accent-hover); filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5)); }
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+        }
+
+        .pixel-star {
+            width: 30px;
+            height: 30px;
+            color: var(--accent-hover);
+            filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+        }
 
         /* Sections */
-        .section { padding: 6rem 2rem; position: relative; z-index: 1; }
-        .section-container { max-width: 1100px; margin: 0 auto; }
-        .section-header { margin-bottom: 3.5rem; }
+        .section {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
 
         .section-label {
             font-family: 'Pixelify Sans', cursive;
@@ -553,12 +831,30 @@
             gap: 0.5rem;
         }
 
-        .section-label::before { content: '▶'; font-size: 0.7rem; }
-        .section-title { font-family: 'Pixelify Sans', cursive; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 700; }
-        .section-desc { color: var(--text-secondary); margin-top: 0.5rem; max-width: 600px; }
+        .section-label::before {
+            content: '▶';
+            font-size: 0.7rem;
+        }
+
+        .section-title {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+        }
+
+        .section-desc {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            max-width: 600px;
+        }
 
         /* Stats */
-        .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
 
         .stat-item {
             background: var(--bg-card);
@@ -571,12 +867,32 @@
             overflow: hidden;
         }
 
-        .stat-item::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--yellow)); }
-        .stat-item:nth-child(2)::before { background: linear-gradient(90deg, var(--cyan), var(--green)); }
-        .stat-item:nth-child(3)::before { background: linear-gradient(90deg, var(--pink), var(--accent)); }
-        .stat-item:nth-child(4)::before { background: linear-gradient(90deg, var(--green), var(--cyan)); }
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--yellow));
+        }
 
-        .stat-item:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); }
+        .stat-item:nth-child(2)::before {
+            background: linear-gradient(90deg, var(--cyan), var(--green));
+        }
+
+        .stat-item:nth-child(3)::before {
+            background: linear-gradient(90deg, var(--pink), var(--accent));
+        }
+
+        .stat-item:nth-child(4)::before {
+            background: linear-gradient(90deg, var(--green), var(--cyan));
+        }
+
+        .stat-item:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+        }
 
         .stat-value {
             font-family: 'Pixelify Sans', cursive;
@@ -588,10 +904,21 @@
             background-clip: text;
         }
 
-        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
 
         /* About */
-        .about-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 2rem; align-items: start; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            gap: 2rem;
+            align-items: start;
+        }
 
         .about-card {
             background: var(--bg-card);
@@ -614,7 +941,11 @@
             background: linear-gradient(90deg, var(--accent), var(--accent-hover));
         }
 
-        .about-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .about-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
 
         .about-kicker {
             display: inline-flex;
@@ -628,10 +959,25 @@
             margin-bottom: 0.8rem;
         }
 
-        .about-kicker::before { content: '◆'; color: var(--cyan); font-size: 0.7rem; }
+        .about-kicker::before {
+            content: '◆';
+            color: var(--cyan);
+            font-size: 0.7rem;
+        }
 
-        .about-text h3 { font-family: 'Pixelify Sans', cursive; font-size: 1.55rem; line-height: 1.15; margin-bottom: 1rem; color: var(--text-primary); }
-        .about-text p { color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.98rem; }
+        .about-text h3 {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 1.55rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
 
         .about-highlights {
             list-style: none;
@@ -649,7 +995,11 @@
             transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
         }
 
-        .about-highlight:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); }
+        .about-highlight:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
 
         .about-highlight-title {
             font-family: 'Pixelify Sans', cursive;
@@ -659,9 +1009,16 @@
             letter-spacing: 0.06em;
         }
 
-        .about-highlight-desc { font-size: 0.9rem; color: var(--text-secondary); }
+        .about-highlight-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
 
-        .about-details { display: flex; flex-direction: column; gap: 1rem; }
+        .about-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
         .about-details-card-title {
             font-family: 'Pixelify Sans', cursive;
@@ -681,7 +1038,11 @@
             transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
         }
 
-        .about-detail:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08); }
+        .about-detail:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
 
         .about-detail-icon {
             width: 40px;
@@ -695,14 +1056,34 @@
             border: 2px solid rgba(15, 23, 42, 0.08);
         }
 
-        .about-detail-icon svg { width: 18px; height: 18px; color: var(--on-accent); }
-        .about-detail-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
-        .about-detail-value { font-weight: 650; font-size: 0.95rem; color: var(--text-primary); }
+        .about-detail-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--on-accent);
+        }
+
+        .about-detail-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .about-detail-value {
+            font-weight: 650;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
 
         /* Experience */
-        .experience-section { background: var(--bg-secondary); }
+        .experience-section {
+            background: var(--bg-secondary);
+        }
 
-        .timeline { position: relative; padding-left: 3rem; }
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
 
         .timeline::before {
             content: '';
@@ -714,7 +1095,10 @@
             background: repeating-linear-gradient(to bottom, var(--accent) 0px, var(--accent) 8px, transparent 8px, transparent 16px);
         }
 
-        .timeline-item { position: relative; margin-bottom: 2.5rem; }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
 
         .timeline-item::before {
             content: '';
@@ -729,11 +1113,35 @@
             z-index: 1;
         }
 
-        .timeline-card { background: var(--bg-card); border: 3px solid var(--pixel-border-light); box-shadow: var(--shadow); padding: 1.5rem; transition: all 0.2s ease; }
-        .timeline-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .timeline-card {
+            background: var(--bg-card);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
 
-        .timeline-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; }
-        .timeline-role { font-family: 'Pixelify Sans', cursive; font-size: 1.1rem; font-weight: 700; color: var(--accent-hover); }
+        .timeline-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-role {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-hover);
+        }
 
         .timeline-date {
             font-family: 'Pixelify Sans', cursive;
@@ -745,27 +1153,116 @@
             border-radius: 4px;
         }
 
-        .timeline-company { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.3rem; font-weight: 600; }
+        .timeline-company {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
 
-        .timeline-type { display: inline-block; font-size: 0.7rem; padding: 0.2rem 0.6rem; background: var(--accent); color: #000; font-weight: 600; margin-bottom: 0.8rem; margin-right: 0.5rem; border-radius: 3px; }
-        .timeline-type.hybrid { background: var(--cyan); color: #000; }
-        .timeline-type.onsite { background: var(--pink); color: #000; }
+        .timeline-type {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--accent);
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            margin-right: 0.5rem;
+            border-radius: 3px;
+        }
 
-        .timeline-desc { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
+        .timeline-type.hybrid {
+            background: var(--cyan);
+            color: #000;
+        }
+
+        .timeline-type.onsite {
+            background: var(--pink);
+            color: #000;
+        }
+
+        .timeline-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
 
         /* Education */
-        .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
 
-        .edu-card { background: var(--bg-card); border: 3px solid var(--pixel-border-light); box-shadow: var(--shadow); padding: 2rem; transition: all 0.2s ease; position: relative; overflow: hidden; }
-        .edu-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--yellow)); }
-        .edu-card:nth-child(2)::before { background: linear-gradient(90deg, var(--cyan), var(--green)); }
-        .edu-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .edu-card {
+            background: var(--bg-card);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-        .edu-icon { width: 50px; height: 50px; background: var(--bg-secondary); border: 3px solid var(--pixel-border-light); box-shadow: 3px 3px 0 var(--pixel-border); display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; border-radius: 10px; }
-        .edu-icon svg { width: 24px; height: 24px; color: var(--accent-hover); }
-        .edu-degree { font-family: 'Pixelify Sans', cursive; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
-        .edu-school { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
-        .edu-year { font-family: 'Pixelify Sans', cursive; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .edu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--yellow));
+        }
+
+        .edu-card:nth-child(2)::before {
+            background: linear-gradient(90deg, var(--cyan), var(--green));
+        }
+
+        .edu-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .edu-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-secondary);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: 3px 3px 0 var(--pixel-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            border-radius: 10px;
+        }
+
+        .edu-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--accent-hover);
+        }
+
+        .edu-degree {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-school {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-year {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
 
         .edu-score {
             display: inline-flex;
@@ -782,18 +1279,61 @@
         }
 
         /* Projects */
-        .projects-section { background: var(--bg-secondary); }
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+        .projects-section {
+            background: var(--bg-secondary);
+        }
 
-        .project-card { background: var(--bg-card); border: 3px solid var(--pixel-border-light); box-shadow: var(--shadow); padding: 2rem; transition: all 0.2s ease; display: flex; flex-direction: column; }
-        .project-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
 
-        .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.2rem; }
+        .project-card {
+            background: var(--bg-card);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
 
-        .project-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent), #d97706); border: 3px solid var(--pixel-border-light); box-shadow: 3px 3px 0 var(--pixel-border); display: flex; align-items: center; justify-content: center; border-radius: 10px; }
-        .project-icon svg { width: 24px; height: 24px; color: #000; }
+        .project-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
 
-        .project-links { display: flex; gap: 0.5rem; }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: 3px 3px 0 var(--pixel-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .project-icon svg {
+            width: 24px;
+            height: 24px;
+            color: #000;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.5rem;
+        }
 
         .project-link {
             width: 36px;
@@ -809,25 +1349,94 @@
             border-radius: 6px;
         }
 
-        .project-link:hover { color: var(--accent-hover); transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--pixel-border); border-color: var(--accent); }
-        .project-link svg { width: 16px; height: 16px; }
+        .project-link:hover {
+            color: var(--accent-hover);
+            transform: translate(-1px, -1px);
+            box-shadow: 3px 3px 0 var(--pixel-border);
+            border-color: var(--accent);
+        }
 
-        .project-name { font-family: 'Pixelify Sans', cursive; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.6rem; }
-        .project-desc { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; flex-grow: 1; }
+        .project-link svg {
+            width: 16px;
+            height: 16px;
+        }
 
-        .project-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .project-tag { font-family: 'Pixelify Sans', cursive; font-size: 0.75rem; padding: 0.3rem 0.8rem; background: var(--bg-secondary); border: 2px solid var(--pixel-border-light); color: var(--cyan); font-weight: 600; border-radius: 4px; }
+        .project-name {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-tag {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--pixel-border-light);
+            color: var(--cyan);
+            font-weight: 600;
+            border-radius: 4px;
+        }
 
         /* Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
 
-        .skill-category { background: var(--bg-card); border: 3px solid var(--pixel-border-light); box-shadow: var(--shadow); padding: 1.5rem; transition: all 0.2s ease; }
-        .skill-category:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .skill-category {
+            background: var(--bg-card);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
 
-        .skill-category-title { font-family: 'Pixelify Sans', cursive; font-size: 0.85rem; font-weight: 700; color: var(--accent-hover); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
-        .skill-category-title::before { content: '◆'; font-size: 0.7rem; color: var(--cyan); }
+        .skill-category:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
 
-        .skill-items { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .skill-category-title {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--accent-hover);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category-title::before {
+            content: '◆';
+            font-size: 0.7rem;
+            color: var(--cyan);
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
 
         .skill-item {
             display: inline-flex;
@@ -844,30 +1453,112 @@
             border-radius: 6px;
         }
 
-        .skill-item:hover { background: var(--accent); color: #000; transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--pixel-border); border-color: var(--accent); }
+        .skill-item:hover {
+            background: var(--accent);
+            color: #000;
+            transform: translate(-2px, -2px);
+            box-shadow: 3px 3px 0 var(--pixel-border);
+            border-color: var(--accent);
+        }
 
         /* Certifications */
-        .certs-section { background: var(--bg-secondary); }
-        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .certs-section {
+            background: var(--bg-secondary);
+        }
 
-        .cert-card { background: var(--bg-card); border: 3px solid var(--pixel-border-light); box-shadow: var(--shadow); padding: 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: all 0.2s ease; border-radius: 10px; text-decoration: none; color: inherit; }
-        .cert-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
 
-        .cert-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent), #d97706); border: 3px solid var(--pixel-border-light); box-shadow: 3px 3px 0 var(--pixel-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 10px; }
-        .cert-card:nth-child(2) .cert-icon { background: linear-gradient(135deg, var(--cyan), #0891b2); }
-        .cert-card:nth-child(3) .cert-icon { background: linear-gradient(135deg, var(--pink), #e11d48); }
-        .cert-card:nth-child(4) .cert-icon { background: linear-gradient(135deg, var(--green), #16a34a); }
-        .cert-icon svg { width: 22px; height: 22px; color: #000; }
+        .cert-card {
+            background: var(--bg-card);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.2s ease;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .cert-name { font-family: 'Pixelify Sans', cursive; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
-        .cert-issuer { font-size: 0.8rem; color: var(--text-muted); }
+        .cert-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .cert-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            border: 3px solid var(--pixel-border-light);
+            box-shadow: 3px 3px 0 var(--pixel-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+
+        .cert-card:nth-child(2) .cert-icon {
+            background: linear-gradient(135deg, var(--cyan), #0891b2);
+        }
+
+        .cert-card:nth-child(3) .cert-icon {
+            background: linear-gradient(135deg, var(--pink), #e11d48);
+        }
+
+        .cert-card:nth-child(4) .cert-icon {
+            background: linear-gradient(135deg, var(--green), #16a34a);
+        }
+
+        .cert-icon svg {
+            width: 22px;
+            height: 22px;
+            color: #000;
+        }
+
+        .cert-name {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-issuer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
 
         /* Contact */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
 
-        .contact-info h3 { font-family: 'Pixelify Sans', cursive; font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent-hover); }
-        .contact-info p { color: var(--text-secondary); margin-bottom: 2rem; }
-        .contact-methods { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-info h3 {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-hover);
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
         .contact-method {
             display: flex;
@@ -883,18 +1574,61 @@
             border-radius: 10px;
         }
 
-        .contact-method:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .contact-method:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
 
-        .contact-method-icon { width: 42px; height: 42px; background: linear-gradient(135deg, var(--accent), #d97706); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border-radius: 8px; }
-        .contact-method-icon svg { width: 18px; height: 18px; color: #000; }
-        .contact-method-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; }
-        .contact-method-value { font-weight: 600; font-size: 0.9rem; }
+        .contact-method-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--accent), #d97706);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 8px;
+        }
 
-        .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-        .form-group label { font-family: 'Pixelify Sans', cursive; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); }
+        .contact-method-icon svg {
+            width: 18px;
+            height: 18px;
+            color: #000;
+        }
 
-        .form-group input, .form-group textarea {
+        .contact-method-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .contact-method-value {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group textarea {
             background: var(--bg-card);
             border: 3px solid var(--pixel-border-light);
             box-shadow: 3px 3px 0 var(--pixel-border);
@@ -907,15 +1641,54 @@
             border-radius: 8px;
         }
 
-        .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--pixel-border); }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 0 var(--pixel-border);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
 
         /* Footer */
-        .footer { padding: 2rem; text-align: center; border-top: 4px solid var(--pixel-border-light); background: var(--bg-secondary); position: relative; z-index: 1; }
-        .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-        .footer-text { font-family: 'Pixelify Sans', cursive; font-size: 0.85rem; color: var(--text-muted); }
-        .footer-socials { display: flex; gap: 0.8rem; }
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 4px solid var(--pixel-border-light);
+            background: var(--bg-secondary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-text {
+            font-family: 'Pixelify Sans', cursive;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 0.8rem;
+        }
 
         .footer-social {
             width: 40px;
@@ -932,11 +1705,28 @@
             border-radius: 8px;
         }
 
-        .footer-social:hover { color: var(--accent-hover); transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--pixel-border); border-color: var(--accent); }
-        .footer-social svg { width: 16px; height: 16px; }
+        .footer-social:hover {
+            color: var(--accent-hover);
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 var(--pixel-border);
+            border-color: var(--accent);
+        }
+
+        .footer-social svg {
+            width: 16px;
+            height: 16px;
+        }
 
         /* Scroll Progress */
-        .scroll-progress { position: fixed; top: 0; left: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-hover)); z-index: 1001; transition: width 0.1s; }
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            z-index: 1001;
+            transition: width 0.1s;
+        }
 
         /* Back to Top */
         .back-to-top {
@@ -962,37 +1752,125 @@
             border-radius: 10px;
         }
 
-        .back-to-top.visible { opacity: 1; transform: translateY(0); }
-        .back-to-top:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0px rgba(146, 64, 14, 0.22); }
-        .back-to-top:focus-visible { outline: none; box-shadow: var(--shadow-accent), var(--ring); }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px rgba(146, 64, 14, 0.22);
+        }
+
+        .back-to-top:focus-visible {
+            outline: none;
+            box-shadow: var(--shadow-accent), var(--ring);
+        }
 
         /* Animations */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
 
-        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Better keyboard accessibility + motion preferences */
-        a:focus-visible { outline: none; box-shadow: var(--ring); border-radius: 10px; }
+        a:focus-visible {
+            outline: none;
+            box-shadow: var(--ring);
+            border-radius: 10px;
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
-            .reveal { transform: none; opacity: 1; }
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .reveal {
+                transform: none;
+                opacity: 1;
+            }
         }
 
         /* Responsive */
         @media (max-width: 900px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
-            .hero-desc { margin: 0 auto 2rem; }
-            .hero-buttons { justify-content: center; }
-            .hero-links { justify-content: center; }
-            .hero-image { order: -1; }
-            .about-grid { grid-template-columns: 1fr; }
-            .about-highlights { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
-            .stats-bar { grid-template-columns: repeat(2, 1fr); }
-            .profile-polaroid { width: 260px; padding: 12px 12px 40px 12px; }
-            .profile-img { height: 280px; }
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-desc {
+                margin: 0 auto 2rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-links {
+                justify-content: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .profile-polaroid {
+                width: 260px;
+                padding: 12px 12px 40px 12px;
+            }
+
+            .profile-img {
+                height: 280px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1007,9 +1885,11 @@
                 justify-content: space-between;
                 align-items: center;
             }
+
             .navbar.nav-hidden {
                 transform: translateY(-100px);
             }
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -1027,7 +1907,11 @@
                 box-shadow: -10px 0 30px rgba(15, 23, 42, 0.12);
                 z-index: 999;
             }
-            .nav-links.open { right: 0; }
+
+            .nav-links.open {
+                right: 0;
+            }
+
             .nav-links a {
                 width: 100%;
                 text-align: center;
@@ -1037,22 +1921,50 @@
                 border-radius: 20px;
                 display: block;
             }
-            .nav-links a:hover, .nav-links a.active {
+
+            .nav-links a:hover,
+            .nav-links a.active {
                 border-color: var(--pixel-border-light);
                 box-shadow: 3px 3px 0 var(--pixel-border);
             }
-            .nav-toggle { display: flex; }
-            .form-row { grid-template-columns: 1fr; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .floating-elements { display: none; }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-elements {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
-            .section { padding: 4rem 1.2rem; }
-            .stats-bar { grid-template-columns: repeat(2, 1fr); }
-            .edu-grid { grid-template-columns: 1fr; }
-            .certs-grid { grid-template-columns: 1fr; }
-            .skills-grid { grid-template-columns: 1fr; }
+            .section {
+                padding: 4rem 1.2rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .nav-overlay {
@@ -1067,9 +1979,13 @@
             -webkit-backdrop-filter: blur(4px);
         }
 
-        .nav-overlay.active { opacity: 1; pointer-events: all; }
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -1111,7 +2027,8 @@
                     <span class="pixel-text">// FULL STACK DEVELOPER</span>
                 </h1>
                 <p class="hero-desc">
-                    Computer Science undergrad building scalable software systems, automation workflows, and AI infrastructure. Proficient in JavaScript, Node.js, React.js, SQL & Linux.
+                    Computer Science undergrad building scalable software systems, automation workflows, and AI
+                    infrastructure. Proficient in JavaScript, Node.js, React.js, SQL & Linux.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">▶ View Projects</a>
@@ -1119,31 +2036,58 @@
                 </div>
                 <div class="hero-links">
                     <a href="https://github.com/Ar141204" target="_blank" class="hero-link" title="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </a>
                     <a href="https://linkedin.com/in/rahman141204" target="_blank" class="hero-link" title="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
                     </a>
-                    <a href="https://drive.google.com/file/d/1KPUXAmch_2CiM0pmn2M-osoKM_8ebpVe/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="hero-link" title="Resume (PDF)">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3-3 3 3"/></svg>
+                    <a href="https://drive.google.com/file/d/1KPUXAmch_2CiM0pmn2M-osoKM_8ebpVe/view?usp=drivesdk"
+                        target="_blank" rel="noopener noreferrer" class="hero-link" title="Resume (PDF)">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 2v6h6" />
+                            <path d="M12 18v-6" />
+                            <path d="M9 15l3-3 3 3" />
+                        </svg>
                     </a>
                     <a href="mailto:rahman14122004@gmail.com" class="hero-link" title="Email">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
                     </a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="floating-elements">
-                    <div class="float-item"><div class="pixel-smiley"></div></div>
-                    <div class="float-item"><div class="pixel-envelope"></div></div>
+                    <div class="float-item">
+                        <div class="pixel-smiley"></div>
+                    </div>
+                    <div class="float-item">
+                        <div class="pixel-envelope"></div>
+                    </div>
                     <div class="float-item"><span class="pixel-code">{ }</span></div>
-                    <div class="float-item"><div class="pixel-coffee"></div></div>
-                    <div class="float-item"><svg class="pixel-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                    <div class="float-item">
+                        <div class="pixel-coffee"></div>
+                    </div>
+                    <div class="float-item"><svg class="pixel-star" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg></div>
                     <div class="float-item"><span class="pixel-code">&lt;/&gt;</span></div>
                 </div>
                 <div class="profile-polaroid">
                     <div class="polaroid-tape"></div>
-                    <img src="Abdul Rahman.png" alt="Abdul Rahman" class="profile-img" draggable="false" oncontextmenu="return false;">
+                    <img src="Abdul Rahman.png" alt="Abdul Rahman" class="profile-img" draggable="false"
+                        oncontextmenu="return false;">
                 </div>
             </div>
         </div>
@@ -1186,8 +2130,11 @@
                     <div class="about-kicker">Overview</div>
                     <div class="about-text">
                         <h3>Building scalable solutions, one line at a time.</h3>
-                        <p>Highly adaptable Computer Science undergraduate with a strong foundation in full-stack development, automation workflows, and building high-impact software systems.</p>
-                        <p>Known for a rapid learning pace and a proven track record of mastering new technologies to deliver scalable, reliable solutions. Eager to leverage expertise in enterprise and supply chain management solutions.</p>
+                        <p>Highly adaptable Computer Science undergraduate with a strong foundation in full-stack
+                            development, automation workflows, and building high-impact software systems.</p>
+                        <p>Known for a rapid learning pace and a proven track record of mastering new technologies to
+                            deliver scalable, reliable solutions. Eager to leverage expertise in enterprise and supply
+                            chain management solutions.</p>
                     </div>
                     <ul class="about-highlights">
                         <li class="about-highlight">
@@ -1214,7 +2161,11 @@
                     <div class="about-details">
                         <div class="about-detail">
                             <div class="about-detail-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="about-detail-label">Base Location</div>
@@ -1223,7 +2174,12 @@
                         </div>
                         <div class="about-detail">
                             <div class="about-detail-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="about-detail-label">Primary Role</div>
@@ -1232,7 +2188,11 @@
                         </div>
                         <div class="about-detail">
                             <div class="about-detail-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="about-detail-label">Current Status</div>
@@ -1262,7 +2222,8 @@
                         </div>
                         <div class="timeline-company">Kutty Pixel Inc., Ontario, Canada</div>
                         <span class="timeline-type">Remote</span>
-                        <p class="timeline-desc">Leading the AI division at an early-stage startup, architecting core AI infrastructure, automation workflows, and deployment-ready systems.</p>
+                        <p class="timeline-desc">Leading the AI division at an early-stage startup, architecting core AI
+                            infrastructure, automation workflows, and deployment-ready systems.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
@@ -1273,7 +2234,8 @@
                         </div>
                         <div class="timeline-company">Blue Screen Programming Club, Hindustan University</div>
                         <span class="timeline-type hybrid">Hybrid</span>
-                        <p class="timeline-desc">Providing technical mentorship and strategic guidance for student-led programming initiatives.</p>
+                        <p class="timeline-desc">Providing technical mentorship and strategic guidance for student-led
+                            programming initiatives.</p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
@@ -1284,7 +2246,9 @@
                         </div>
                         <div class="timeline-company">Tamil Nadu Newsprint and Papers Limited</div>
                         <span class="timeline-type onsite">Onsite</span>
-                        <p class="timeline-desc">Managed and optimized SQL databases to support critical enterprise ERP systems, improving data reliability for core operations. Assisted in IT infrastructure enhancements.</p>
+                        <p class="timeline-desc">Managed and optimized SQL databases to support critical enterprise ERP
+                            systems, improving data reliability for core operations. Assisted in IT infrastructure
+                            enhancements.</p>
                     </div>
                 </div>
             </div>
@@ -1302,7 +2266,11 @@
             <div class="edu-grid">
                 <div class="edu-card reveal">
                     <div class="edu-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
                     </div>
                     <div class="edu-degree">B.Tech – Computer Science and Engineering</div>
                     <div class="edu-school">Hindustan Institute of Technology and Science, Chennai</div>
@@ -1311,7 +2279,11 @@
                 </div>
                 <div class="edu-card reveal">
                     <div class="edu-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
                     </div>
                     <div class="edu-degree">Higher Secondary Education</div>
                     <div class="edu-school">Raj Matriculation Higher Secondary School, Mayiladuthurai</div>
@@ -1334,16 +2306,26 @@
                 <div class="project-card reveal">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                            </svg>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Ar141204/Water-Quality-Forecast-Analytics-System" target="_blank" class="project-link" title="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <a href="https://github.com/Ar141204/Water-Quality-Forecast-Analytics-System"
+                                target="_blank" class="project-link" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                     <h3 class="project-name">Water Quality Forecast System</h3>
-                    <p class="project-desc">Ensemble AI model forecasting Chlorophyll-a levels &amp; environmental risk across 38 Tamil Nadu districts using satellite data.</p>
+                    <p class="project-desc">Ensemble AI model forecasting Chlorophyll-a levels &amp; environmental risk
+                        across 38 Tamil Nadu districts using satellite data.</p>
                     <div class="project-stack">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Node.js</span>
@@ -1360,16 +2342,25 @@
                 <div class="project-card reveal">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Ar141204/Traffic-Density-Analyzer" target="_blank" class="project-link" title="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <a href="https://github.com/Ar141204/Traffic-Density-Analyzer" target="_blank"
+                                class="project-link" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                     <h3 class="project-name">Traffic Density Analyzer</h3>
-                    <p class="project-desc">An intelligent traffic monitoring system that analyzes real-time traffic density using YOLOv8 object detection, served through a Python Flask web application.</p>
+                    <p class="project-desc">An intelligent traffic monitoring system that analyzes real-time traffic
+                        density using YOLOv8 object detection, served through a Python Flask web application.</p>
                     <div class="project-stack">
                         <span class="project-tag">Python</span>
                         <span class="project-tag">Flask</span>
@@ -1379,16 +2370,25 @@
                 <div class="project-card reveal">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c4.5 4.5 7 8 7 11a7 7 0 0 1-14 0c0-3 2.5-6.5 7-11z"/><path d="M9 14a3 3 0 0 0 6 0"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2c4.5 4.5 7 8 7 11a7 7 0 0 1-14 0c0-3 2.5-6.5 7-11z" />
+                                <path d="M9 14a3 3 0 0 0 6 0" />
+                            </svg>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Ar141204/CarPricePredictor" target="_blank" class="project-link" title="GitHub">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <a href="https://github.com/Ar141204/CarPricePredictor" target="_blank" class="project-link"
+                                title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                     <h3 class="project-name">Car Price Predictor</h3>
-                    <p class="project-desc">A full-stack web application that predicts car prices using machine learning models, built with React.js frontend and Python Flask backend with SQL database integration.</p>
+                    <p class="project-desc">A full-stack web application that predicts car prices using machine learning
+                        models, built with React.js frontend and Python Flask backend with SQL database integration.</p>
                     <div class="project-stack">
                         <span class="project-tag">React.js</span>
                         <span class="project-tag">Python</span>
@@ -1469,54 +2469,90 @@
                 <p class="section-desc">Badges and certifications earned along the journey.</p>
             </div>
             <div class="certs-grid">
-                <a class="cert-card reveal" href="https://drive.google.com/file/d/1krFXpvItP9Ne56sPvfFZvdObnccbLll9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Intellithon 2025 certificate">
+                <a class="cert-card reveal"
+                    href="https://drive.google.com/file/d/1krFXpvItP9Ne56sPvfFZvdObnccbLll9/view?usp=drive_link"
+                    target="_blank" rel="noopener noreferrer" aria-label="Open Intellithon 2025 certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7" />
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">Intellithon 2025 — Runner Up</div>
                         <div class="cert-issuer">Hindustan University (24Hr Hackathon)</div>
                     </div>
                 </a>
-                <a class="cert-card reveal" href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy81ZDdlMmU0MmYzZWRhOTU4L0VjeG9Icl9NRHZkSW52UWVrSkJHMjN3QlV0RWFJMG82TlVFZW9uOFFiMzBXV2c&cid=5D7E2E42F3EDA958&id=5D7E2E42F3EDA958%21sbf1e68cc0ecc48f79ef41e909046db7c&parId=root&o=OneUp" target="_blank" rel="noopener noreferrer" aria-label="Open Cybersecurity Internship (AICTE) certificate">
+                <a class="cert-card reveal"
+                    href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy81ZDdlMmU0MmYzZWRhOTU4L0VjeG9Icl9NRHZkSW52UWVrSkJHMjN3QlV0RWFJMG82TlVFZW9uOFFiMzBXV2c&cid=5D7E2E42F3EDA958&id=5D7E2E42F3EDA958%21sbf1e68cc0ecc48f79ef41e909046db7c&parId=root&o=OneUp"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Cybersecurity Internship (AICTE) certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">Cybersecurity Internship (AICTE)</div>
                         <div class="cert-issuer">Edunet Foundation (AICTE)</div>
                     </div>
                 </a>
-                <a class="cert-card reveal" href="https://www.guvi.in/share-certificate/88Z8Q37ay868f16MrL" target="_blank" rel="noopener noreferrer" aria-label="Open Python Certification certificate">
+                <a class="cert-card reveal" href="https://www.guvi.in/share-certificate/88Z8Q37ay868f16MrL"
+                    target="_blank" rel="noopener noreferrer" aria-label="Open Python Certification certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">Python Certification</div>
                         <div class="cert-issuer">GUVI</div>
                     </div>
                 </a>
-                <a class="cert-card reveal" href="https://www.hackerrank.com/certificates/iframe/1928a13a76f8" target="_blank" rel="noopener noreferrer" aria-label="Open SQL (Advanced) certificate">
+                <a class="cert-card reveal" href="https://www.hackerrank.com/certificates/iframe/1928a13a76f8"
+                    target="_blank" rel="noopener noreferrer" aria-label="Open SQL (Advanced) certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">SQL (Advanced)</div>
                         <div class="cert-issuer">HackerRank</div>
                     </div>
                 </a>
-                <a class="cert-card reveal" href="https://www.guvi.in/share-certificate/236ZKiR1686187ts7S" target="_blank" rel="noopener noreferrer" aria-label="Open HTML & CSS Certification certificate">
+                <a class="cert-card reveal" href="https://www.guvi.in/share-certificate/236ZKiR1686187ts7S"
+                    target="_blank" rel="noopener noreferrer" aria-label="Open HTML & CSS Certification certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 18l6-6-6-6" />
+                            <path d="M8 6l-6 6 6 6" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">HTML &amp; CSS Certification</div>
                         <div class="cert-issuer">GUVI</div>
                     </div>
                 </a>
-                <a class="cert-card reveal" href="https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F5D7E2E42F3EDA958%21s827360e55d4343a9a2fc3637f946bcc5%3Fithint%3Dphoto%26migratedtospo%3Dtrue&cid=5D7E2E42F3EDA958&id=5D7E2E42F3EDA958%21s827360e55d4343a9a2fc3637f946bcc5&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2kvYy81ZDdlMmU0MmYzZWRhOTU4L0VlVmdjNEpEWGFsRG92dzJOX2xHdk1VQkFhTkdhY0xfZ2VIRmxkTDk4WndrMXc&v=photos" target="_blank" rel="noopener noreferrer" aria-label="Open Microsoft Certified: Azure AI Fundamentals certificate">
+                <a class="cert-card reveal"
+                    href="https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F5D7E2E42F3EDA958%21s827360e55d4343a9a2fc3637f946bcc5%3Fithint%3Dphoto%26migratedtospo%3Dtrue&cid=5D7E2E42F3EDA958&id=5D7E2E42F3EDA958%21s827360e55d4343a9a2fc3637f946bcc5&redeem=aHR0cHM6Ly8xZHJ2Lm1zL2kvYy81ZDdlMmU0MmYzZWRhOTU4L0VlVmdjNEpEWGFsRG92dzJOX2xHdk1VQkFhTkdhY0xfZ2VIRmxkTDk4WndrMXc&v=photos"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Open Microsoft Certified: Azure AI Fundamentals certificate">
                     <div class="cert-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
                     </div>
                     <div>
                         <div class="cert-name">Microsoft Certified: Azure AI Fundamentals (AICTE)</div>
@@ -1538,11 +2574,17 @@
             <div class="contact-grid">
                 <div class="contact-info reveal">
                     <h3>Get in Touch</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision.</p>
                     <div class="contact-methods">
                         <a href="mailto:rahman14122004@gmail.com" class="contact-method">
                             <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="contact-method-label">Email</div>
@@ -1551,7 +2593,11 @@
                         </a>
                         <a href="tel:+916383484703" class="contact-method">
                             <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="contact-method-label">Phone</div>
@@ -1560,7 +2606,10 @@
                         </a>
                         <a href="https://linkedin.com/in/rahman141204" target="_blank" class="contact-method">
                             <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="contact-method-label">LinkedIn</div>
@@ -1569,7 +2618,10 @@
                         </a>
                         <a href="https://github.com/Ar141204" target="_blank" class="contact-method">
                             <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
                             </div>
                             <div>
                                 <div class="contact-method-label">GitHub</div>
@@ -1597,9 +2649,11 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell me about your project or idea..." required></textarea>
+                            <textarea id="message" placeholder="Tell me about your project or idea..."
+                                required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">▶ Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">▶
+                            Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1612,13 +2666,23 @@
             <div class="footer-text">© 2026 Abdul Rahman M. Built with pixel love ♥</div>
             <div class="footer-socials">
                 <a href="https://github.com/Ar141204" target="_blank" class="footer-social" title="GitHub">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
                 </a>
                 <a href="https://linkedin.com/in/rahman141204" target="_blank" class="footer-social" title="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
                 </a>
                 <a href="mailto:rahman14122004@gmail.com" class="footer-social" title="Email">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
                 </a>
             </div>
         </div>
@@ -1703,7 +2767,7 @@
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1711,4 +2775,5 @@
         });
     </script>
 </body>
+
 </html>
